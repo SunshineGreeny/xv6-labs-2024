@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]){
             fprintf(2,"child read() error!\n");
             exit_status=1; //出错
         }else{
-            fprintf(1,"%d:received ping\n",getpid());
+            fprintf(1,"%d: received ping\n",getpid());
         }
 
         //向父进程发送 pong
@@ -65,7 +65,7 @@ int main(int argc, char const *argv[]){
             fprintf(2,"parent read() error!\n");
             exit_status=1; //出错
         }else{
-            fprintf(1,"%d:received pong\n",getpid());
+            fprintf(1,"%d: received pong\n",getpid());
         }
 
         //关闭剩余端口并退出
